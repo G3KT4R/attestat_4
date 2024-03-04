@@ -1,13 +1,17 @@
 .login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 92px);
+  padding: 10px;
+  width: 300px;
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightblue;
 }
 
 .login .form-wrapper {
-  border: 2px solid lightseagreen;
+  border: 2px solid blue;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 0 auto;

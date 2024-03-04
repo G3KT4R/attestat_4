@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchCharacters, getCharacters } from '../../store/charactersSlice';
-import './main_page.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCharacters, getCharacters } from "../../store/charactersSlice";
+import "./main_page.css";
 
 export const MainPage = () => {
   const dispatch = useDispatch();
@@ -15,17 +15,10 @@ export const MainPage = () => {
     <>
       <h3>Главная страница</h3>
       <div className="custom-table">
-        <div className="headers">
-          <div className="first-column">Имя персонажа</div>
-          <div className="second-column">Пол персонажа</div>
-        </div>
+        <div className="headers"></div>
+        <img src="C:\Users\germa\Desktop\intermediate_certification_4-dev\public\joker.jpg"></img>
         {characters &&
-          characters.map((character) => (
-            <div key={character.id} className="tbody">
-              <div className="first-column">{character.name}</div>
-              <div className="second-column">{character.gender}</div>
-            </div>
-          ))}
+          characters.map((character) => <img src={character.image}></img>)}
       </div>
     </>
   );

@@ -1,17 +1,20 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchCharacters = createAsyncThunk('characters/fetchProducts', async () => {
-  const response = await fetch('https://rickandmortyapi.com/api/character');
-  const characters = await response.json();
-  return characters;
-});
+export const fetchCharacters = createAsyncThunk(
+  "characters/fetchProducts",
+  async () => {
+    const response = await fetch("https://yesno.wtf/api");
+    const characters = await response.json();
+    return characters;
+  }
+);
 
 const initialState = {
   list: [],
 };
 
 const charactersSlice = createSlice({
-  name: 'characters',
+  name: "characters",
   initialState,
   reducers: {
     addCharacters: (state, action) => {
@@ -21,7 +24,7 @@ const charactersSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCharacters.fulfilled, (state, action) => {
-      console.log('action.payload', action.payload);
+      console.log("action.payload", action.payload);
       state.list = action.payload.results;
     });
     builder.addCase(fetchCharacters.rejected, (state, action) => {});
