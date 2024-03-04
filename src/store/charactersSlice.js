@@ -5,12 +5,14 @@ export const fetchCharacters = createAsyncThunk(
   async () => {
     const response = await fetch("https://yesno.wtf/api");
     const characters = await response.json();
+    //console.log("characters", characters.image);
     return characters;
   }
 );
 
 const initialState = {
   list: [],
+  randomGif: "",
 };
 
 const charactersSlice = createSlice({
@@ -19,18 +21,19 @@ const charactersSlice = createSlice({
   reducers: {
     addCharacters: (state, action) => {
       const { characters } = action.payload;
-      state.list = characters;
+      state.randomGif = characters;
+      //console.log("state.randomGif", state.randomGif);
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCharacters.fulfilled, (state, action) => {
       console.log("action.payload", action.payload);
-      state.list = action.payload.results;
+      state.randomGif = action.payload.image;
     });
     builder.addCase(fetchCharacters.rejected, (state, action) => {});
   },
 });
 
-export const getCharacters = (state) => state.characters.list;
+export const getCharacters = (state) => state.characters.randomGif;
 export const { addCharacters } = charactersSlice.actions;
 export default charactersSlice.reducer;

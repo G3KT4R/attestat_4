@@ -50,7 +50,7 @@ export const LoginPage = () => {
 
   return (
     <div className="login">
-      <h3>Форма входа</h3>
+      <h3>Авторизация</h3>
 
       <form className="login-form">
         <div className="input-wrapper">
@@ -80,7 +80,7 @@ export const LoginPage = () => {
       </form>
 
       <div className="registrate">
-        Ещё нет аккаунта?{" "}
+        {" "}
         <Link to={AppRoute.Registration}>Зарегистрироваться</Link>
       </div>
       <div className="error">

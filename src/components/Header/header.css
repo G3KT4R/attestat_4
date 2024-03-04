@@ -11,11 +11,11 @@
 .header-user {
   display: flex;
   align-items: center;
-  border: 2px solid lightseagreen;
+  border: 2px solid lightblue;
   border-radius: 10px;
   padding: 5px 10px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #304ed3;
 }
 
 .user-name {

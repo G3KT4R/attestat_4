@@ -14,11 +14,8 @@ export const MainPage = () => {
   return (
     <>
       <h3>Главная страница</h3>
-      <div className="custom-table">
-        <div className="headers"></div>
-        <img src="C:\Users\germa\Desktop\intermediate_certification_4-dev\public\joker.jpg"></img>
-        {characters &&
-          characters.map((character) => <img src={character.image}></img>)}
+      <div className="image__wrapper">
+        <img src={characters} alt="random Gif"></img>
       </div>
     </>
   );

@@ -1,30 +1,5 @@
-# intermediate_certification_4
+node index.js (for server start)
 
-Проверка регистрации и авторизации пользователя посредством Cypress.
+npm run cypress:open (for test)
 
-Для начала необходимо установить зависимости с помощью команды `npm i`.
-
-Затем перейти в папку `/server` и запустить сервер в работу.
-
-Далее необходимо выполнить команду из файла `package.json`
-
-```
-npm run cypress:open
-```
-
-Выбрать опцию `E2E Testing`.
-Выбрать браузер (нарпимер Chrome) и нажать кнопку `Start E2E Testing In Chrome`.
-
-В открывшемся окне нажать на файл `auth.cy.js` находящийся в папке `cypress\e2e`.
-
-Ожидать выполнения теста.
-
----
-
-Работа со storybook.
-
-Для работы со storybook необходимо выполнить следующую команду:
-
-```
-npm run storybook
-```
+npm run storybook (for work with storybook)

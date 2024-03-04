@@ -50,7 +50,7 @@ export const RegistrationPage = () => {
 
   return (
     <div className="registration">
-      <h3>Форма регистрации</h3>
+      <h3>Регистрация</h3>
       <form>
         <div className="input-wrapper">
           <label>Email:</label>
@@ -80,7 +80,7 @@ export const RegistrationPage = () => {
           </button> */}
       </form>
       <div className="registrate">
-        Зарегистрированы? <Link to={AppRoute.Login}>Войти</Link>
+        Уже есть аккуанту? <Link to={AppRoute.Login}>Войти</Link>
       </div>
       <div className="error">
         {errorMessage && <div className="error-message">{errorMessage}</div>}
