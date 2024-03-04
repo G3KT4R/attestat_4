@@ -1,0 +1,24 @@
+.custom-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.headers,
+.tbody {
+  display: flex;
+  justify-content: center;
+  border: 1px solid seagreen;
+  width: 500px;
+}
+
+.first-column,
+.second-column {
+  max-width: 200px;
+  width: 100%;
+}
+
+.first-column {
+  border-right: 1px solid seagreen;
+}
