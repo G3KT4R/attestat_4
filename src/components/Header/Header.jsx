@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./header.css";
 import { useAuthContext } from "../../context/authContext";
 import { AppRoute } from "../../consts";
@@ -20,6 +20,15 @@ export const Header = () => {
   return (
     <header className="header">
       <h1>Aboba</h1>
+      <Link to={AppRoute.Registration}>
+        <button type="primary">Регистрация</button>
+      </Link>
+      <Link to={AppRoute.Login}>
+        <button type="primary">Авторизация</button>
+      </Link>
+      <Link to={AppRoute.Data}>
+        <button type="primary">Данные</button>
+      </Link>
       {user ? (
         <div
           className="header-user"

@@ -1,14 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store } from '../../store';
-import './App.css';
-import { Header } from '../Header/Header';
-import { AppRoute } from '../../consts';
-import { MainPage } from '../../pages/MainPage/MainPage';
-import { LoginPage } from '../../pages/LoginPage/LoginPage';
-import { RegistrationPage } from '../../pages/RegistrationPage/RegistrationPage';
-import { AuthProvider } from '../../context/authContext';
-import { PrivateRoute } from '../PrivateRoute/PrivateRoute';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "../../store";
+import "./App.css";
+import { Header } from "../Header/Header";
+import { AppRoute } from "../../consts";
+import { MainPage } from "../../pages/MainPage/MainPage";
+import { LoginPage } from "../../pages/LoginPage/LoginPage";
+import { RegistrationPage } from "../../pages/RegistrationPage/RegistrationPage";
+import { AuthProvider } from "../../context/authContext";
+import { PrivateRoute } from "../PrivateRoute/PrivateRoute";
+import { DataPage } from "../../pages/DataPage/DataPage";
 
 function App() {
   return (
@@ -27,7 +28,11 @@ function App() {
                 }
               />
               <Route path={AppRoute.Login} element={<LoginPage />} />
-              <Route path={AppRoute.Registration} element={<RegistrationPage />} />
+              <Route
+                path={AppRoute.Registration}
+                element={<RegistrationPage />}
+              />
+              <Route path={AppRoute.Data} element={<DataPage />} />
             </Routes>
           </div>
         </AuthProvider>
