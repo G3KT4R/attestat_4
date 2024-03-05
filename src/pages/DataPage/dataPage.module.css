@@ -15,11 +15,13 @@
 }
 
 .first_column,
-.second_column {
+.second_column,
+.third_column {
   max-width: 200px;
   width: 100%;
 }
 
-.first_column {
+.first_column,
+.second_column {
   border-right: 1px solid seagreen;
 }
