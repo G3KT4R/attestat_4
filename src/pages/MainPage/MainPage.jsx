@@ -9,7 +9,7 @@ export const MainPage = () => {
 
   useEffect(() => {
     dispatch(fetchCharacters());
-  }, [dispatch]);
+  }, []);
 
   return (
     <>

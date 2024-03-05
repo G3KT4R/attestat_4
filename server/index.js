@@ -164,6 +164,12 @@ app.post("/data", async (req, res) => {
   }
 });
 
+app.get("/users", async (req, res) => {
+  const users = await pool.query("SELECT * FROM users");
+  console.log("aboba:", users.row);
+  res.send(JSON.stringify({ users: users.rows, success: true }));
+});
+
 app.listen(9500, () => {
   console.log("server running");
 });

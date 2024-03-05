@@ -11,14 +11,17 @@
   display: flex;
   justify-content: center;
   border: 1px solid seagreen;
-  width: 500px;
+}
+
+.table__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .first_column,
 .second_column,
 .third_column {
-  max-width: 200px;
-  width: 100%;
+  width: 300px;
 }
 
 .first_column,

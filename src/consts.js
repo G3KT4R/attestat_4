@@ -9,4 +9,5 @@ export const ApiRoute = {
   Registration: "/registration",
   Login: "/login",
   Data: "/data",
+  Users: "/users",
 };
